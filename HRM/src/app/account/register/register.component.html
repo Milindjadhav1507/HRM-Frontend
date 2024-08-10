@@ -1,1 +1,63 @@
-<p>register works!</p>
+
+<div class="container mt-3" >
+    <div class="row parent-div" >
+        <!-- left side of div -->
+            <div class="col-md-6 child-div " >
+                <div class="parent-div">
+                    <div class="parent-div">              
+                        <img class="child-div"  src="/assets/register/signup-page.png" alt="" style="max-width: 100%; max-height: 100%; border-bottom-left-radius: 20px;">
+
+                    </div>
+                </div>                
+            </div>
+
+        <!-- diff. between the two side div -->
+            <div class="col-md-1 child-div"></div>
+
+        <!-- right side of div -->
+            <div class="col-md-4 child-div">
+                    <form>
+                        <span>
+                            <b>
+                                <h1 style="margin-top: 23%; line-height: 81px;font-size: 48px; font-weight: 700;" class="poppins_font">SIGN UP</h1>
+                            </b>
+                        </span>
+
+                        <div class="mb-3">
+                            <div class="mb-3 parent-div row">
+                                <div class="child-div col-md-6 ">
+                                    <input type="text" title="For Example :- John" class="form-control poppins_font input_class"   placeholder="First Name" >
+                                </div>
+                                <div class="child-div col-md-6">
+                                    <input type="text" title="For Example :- Iglesis" class="form-control poppins_font input_class"   placeholder="Last Name" >                           
+                                </div>                             
+                            </div>                            
+                        </div>
+
+                        <div class="mb-3">              
+                            <input type="email" title="For Example :- John@gmail.com" class="form-control poppins_font input_class" placeholder="Email-Id" >
+                        </div>
+
+                        <div class="mb-3">                
+                            <input type="password" title="It must be a combination of minimum 8 letters, numbers and symbols. " class="form-control poppins_font input_class"  placeholder="Password" >
+                        </div>
+
+                        <div class="mb-3">                
+                            <input type="password" title="Password Field and Confirm Password should be same" class="form-control poppins_font input_class"  placeholder="Confirm Password"  >
+                        </div>
+                        
+
+                        <button type="submit" class="btn my-4" style="background-color: #3D3185; border-radius: 15.37px; width: 40%;">
+                            <span class="poppins_font" style="font-weight: 700; font-size: 19.21px; color: rgba(255, 255, 255, 1); ">SUBMIT</span>
+                        </button>                        
+                        
+                    </form>
+
+                            <div class="mb-3">   
+                                <a [routerLink]="['/account/login']" routerLinkActive="router-link-active"  class="poppins_font mb-3" style="text-decoration: none; color: rgba(130, 130, 130, 1) ;font-weight: 500; font-size: 13px;line-height: 24px;">Already have an account?</a>
+                            </div>
+                
+
+            </div>
+    </div>
+</div>
