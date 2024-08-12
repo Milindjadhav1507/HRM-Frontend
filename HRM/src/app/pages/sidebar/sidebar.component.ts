@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [RouterLink,RouterLinkActive,RouterModule,CommonModule,DashboardComponent],
+  imports: [RouterLink,RouterLinkActive,CommonModule,DashboardComponent,RouterOutlet],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })

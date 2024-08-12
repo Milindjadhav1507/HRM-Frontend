@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,5 +9,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+
+  isNavbarHidden: boolean = false;
+  constructor(private router:Router){
+    this.router.events.subscribe(() => {
+      this.isNavbarHidden = this.router.url !== '/login' && this.router.url !== '/register';
+    });
+  }
 
 }

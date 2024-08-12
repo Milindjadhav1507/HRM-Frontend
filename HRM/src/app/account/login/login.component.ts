@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { SidebarComponent } from '../../pages/sidebar/sidebar.component';
-import { PagesModule } from '../../pages/pages.module';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink,SidebarComponent],
+  imports: [RouterLink, SidebarComponent],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  constructor(private router: Router) {}
+  ngOnInit(): void {}
 
+  pageRedirectToAfterLogin() {
+    this.router.navigateByUrl('pages/sidebar');
+  }
 }

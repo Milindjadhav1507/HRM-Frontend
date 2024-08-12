@@ -1,57 +1,51 @@
-<div class="container" >
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-white" style="width: 280px; height: 100vh;border-right: 1px solid rgba(221, 221, 221, 1);">
-
-
-        <ul class="nav nav-pills flex-column mb-auto">
-
-                <li class="nav-item m-3" [routerLink]="['pages/dashboard']"  >
-                    <a  class="poppins_font nav-link active " aria-current="page" style="background-color: #3d3185;">              
-                    <img src="assets/login/sidebar/dashboard-icon.svg" alt="">
-                    <span class="m-4 span_sidebar_bullets">Dashboard</span>              
-                    </a>
-                </li>
-
-                <li class="nav-item m-3">
-                    <a  class="poppins_font nav-link link-body-emphasis" >              
-                    <img src="assets/login/sidebar/Staff.svg" alt="">
-                    <span class="m-4 unactive_sidebar_bullet">Staff</span>              
-                    </a>
-                </li>
-
-                <li class="nav-item m-3">
-                    <a  class="poppins_font nav-link link-body-emphasis" aria-current="page">              
-                    <img src="assets/login/sidebar/Employee.svg" alt="">
-                    <span class="m-4 unactive_sidebar_bullet">Employee</span>              
-                    </a>
-                </li>
-
-                <li class="nav-item m-3">
-                    <a  class="poppins_font nav-link link-body-emphasis" aria-current="page">              
-                    <img src="assets/login/sidebar/Payroll.svg" alt="">
-                    <span class="m-4 unactive_sidebar_bullet">Payroll</span>              
-                    </a>
-                </li>
-
-                <li class="nav-item m-3">
-                    <a  class="poppins_font nav-link link-body-emphasis " aria-current="page">              
-                    <img src="assets/login/sidebar/settings.svg" alt="">
-                    <span class="m-4 unactive_sidebar_bullet">Settings</span>              
-                    </a>
-                </li>
-
-                <li class="nav-item m-3">
-                    <a  class="poppins_font nav-link link-body-emphasis" aria-current="page">              
-                    <img src="assets/login/sidebar/More.svg" alt="">
-                    <span class="m-4 unactive_sidebar_bullet">More</span>              
-                    </a>
-                </li>
-        </ul>
-
-
-    </div>
-
-<app-dashboard></app-dashboard>
-   
-</div>
+<div class="container">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-white" style="width: 280px; height: 100%;border-right: 1px solid rgba(221, 221, 221, 1);">
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item m-3">
+          <button [routerLink]="['/pages/dashboard']" class="poppins_font nav-link active" aria-current="page" style="background-color: #3d3185;">
+            <img src="assets/login/sidebar/dashboard-icon.svg" alt="">
+            <span class="m-4 span_sidebar_bullets">Dashboard</span>
+          </button>
+        </li>
   
+        <li class="nav-item m-3">
+          <a class="poppins_font nav-link link-body-emphasis">
+            <img src="assets/login/sidebar/Staff.svg" alt="">
+            <span class="m-4 unactive_sidebar_bullet">Staff</span>
+          </a>
+        </li>
+  
+        <li class="nav-item m-3">
+          <a class="poppins_font nav-link link-body-emphasis" aria-current="page">
+            <img src="assets/login/sidebar/Employee.svg" alt="">
+            <span class="m-4 unactive_sidebar_bullet">Employee</span>
+          </a>
+        </li>
+  
+        <li class="nav-item m-3">
+          <a class="poppins_font nav-link link-body-emphasis" aria-current="page">
+            <img src="assets/login/sidebar/Payroll.svg" alt="">
+            <span class="m-4 unactive_sidebar_bullet">Payroll</span>
+          </a>
+        </li>
+  
+        <li class="nav-item m-3">
+          <a class="poppins_font nav-link link-body-emphasis" aria-current="page">
+            <img src="assets/login/sidebar/settings.svg" alt="">
+            <span class="m-4 unactive_sidebar_bullet">Settings</span>
+          </a>
+        </li>
+  
+        <li class="nav-item m-3">
+          <a class="poppins_font nav-link link-body-emphasis" aria-current="page">
+            <img src="assets/login/sidebar/More.svg" alt="">
+            <span class="m-4 unactive_sidebar_bullet">More</span>
+          </a>
+        </li>
+      </ul>
 
+      
+    </div>   
+    
+    
+</div>

@@ -67,21 +67,21 @@
                                 <div class="d-flex justify-content-between">
                                   <!-- 1st Button: Left Aligned -->
                                   <div class="d-flex align-items-center">
-                                    <button [routerLink]="['']" routerLinkActive="router-link-active" type="button" class="btn btn-outline-primary " style="border-radius: 16.44px; border: 0.46px solid rgba(0, 0, 0, 1);">
+                                    <button  type="button" class="btn btn-outline-primary " style="border-radius: 16.44px; border: 0.46px solid rgba(0, 0, 0, 1);">
                                       <p class="poppins_font px-2" style="color: black; margin-bottom: 0px; font-size: 12.17px; line-height: 16.58px; letter-spacing: 6.5%; font-weight: 500;">Super Admin Login</p>
                                     </button>
                                   </div>
                             
                                   <!-- 2nd Button: Center Aligned -->
                                   <div class="d-flex align-items-center mx-auto"> <!-- mx-auto centers the div horizontally -->
-                                    <button [routerLink]="['/sidebar']" routerLinkActive="router-link-active" type="button" class="btn btn-outline-primary btn-custom"  style="border-radius: 16.44px; border: 0.46px solid rgba(0, 0, 0, 1);">
+                                    <button  type="button" class="btn btn-outline-primary btn-custom"  style="border-radius: 16.44px; border: 0.46px solid rgba(0, 0, 0, 1);">
                                       <p class="poppins_font px-2" style="color: black; margin-bottom: 0px; font-size: 12.17px; line-height: 16.58px; letter-spacing: 6.5%; font-weight: 500;">Company Login</p>
                                     </button>
                                   </div>
                             
                                   <!-- 3rd Button: Right Aligned -->
                                   <div class="d-flex align-items-center">
-                                    <button [routerLink]="['pages/dashboard']" routerLinkActive="router-link-active" type="button" class="btn btn-outline-primary btn-custom"  style="border-radius: 16.44px; border: 0.46px solid rgba(0, 0, 0, 1);">
+                                    <button (click)="pageRedirectToAfterLogin()"  type="button" class="btn btn-outline-primary btn-custom"  style="border-radius: 16.44px; border: 0.46px solid rgba(0, 0, 0, 1);">
                                       <p class="poppins_font px-2" style="color: black; margin-bottom: 0px; font-size: 12.17px; line-height: 16.58px; letter-spacing: 6.5%; font-weight: 500;">HR Login</p>
                                     </button>
                                   </div>
