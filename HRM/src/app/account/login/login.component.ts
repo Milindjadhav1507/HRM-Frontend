@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SidebarComponent } from '../../pages/sidebar/sidebar.component';
+import { PagesModule } from '../../pages/pages.module';
 @Component({
   selector: 'app-login',
   standalone: true,
