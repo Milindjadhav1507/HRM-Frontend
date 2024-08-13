@@ -11,10 +11,8 @@ Branch: string;
 Department: string;
 Designation: string;
 Dateofjoining: string;
-Action: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-
 {EmployeeName: 'Sonia Sammy',EmployeeID: 'EMP0034567',Branch:'Andheri',Department:'Finance' ,Designation:'Manager',Dateofjoining:'23.05.2020'},
 {EmployeeName: 'Mina Mathur	',EmployeeID: 'EMP003223',Branch:'Mulund',Department:'Marketing' ,Designation:'Executive',Dateofjoining:'10.01.2024'},
 {EmployeeName: 'Shankar V',EmployeeID: 'EMP0036789',Branch:'Andheri',Department:'HR' ,Designation:'Intern',Dateofjoining:'06.03.2024'},
@@ -23,8 +21,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 {EmployeeName: 'Richa Mishra',EmployeeID: 'EMP0036545',Branch:'Chembur',Department:'Marketing' ,Designation:'Lead',Dateofjoining:'22.10.2022'},
 {EmployeeName: 'Tanu Meena',EmployeeID: 'EMP0035432',Branch:'Chembur',Department:'Communication' ,Designation:'Manager',Dateofjoining:'23.05.2020'},
 {EmployeeName: 'Ajay Fernandes',EmployeeID: 'EMP0031022',Branch:'Bandra',Department:'Development' ,Designation:'Manager',Dateofjoining:'23.05.2020'},
-
 ];
+
 @Component({
   selector: 'app-employee',
   standalone: true,
@@ -33,7 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrl: './employee.component.scss',
 })
 export class EmployeeComponent implements AfterViewInit {
-  displayedColumns: string[] = ['EmployeeName','EmployeeID','Branch','Department','Designation','Dateofjoining'];
+  displayedColumns: string[] = ['EmployeeName','EmployeeID','Branch','Department','Designation','Dateofjoining','Action'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   constructor(private _liveAnnouncer: LiveAnnouncer) {}
@@ -45,11 +43,4 @@ export class EmployeeComponent implements AfterViewInit {
   }
 
 
-  // announceSortChange(sortState: Sort) {
-  //   if (sortState.direction) {
-  //     this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
-  //   } else {
-  //     this._liveAnnouncer.announce('Sorting cleared');
-  //   }
-  // }
 }

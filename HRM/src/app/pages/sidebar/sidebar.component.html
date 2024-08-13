@@ -1,51 +1,81 @@
-<div class="container">
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-white" style="width: 280px; height: 100%;border-right: 1px solid rgba(221, 221, 221, 1);">
+<div class="row">
+  <div class="col-lg-2 col-md-2 col-sm-2">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-white"
+      style="width: 280px; height: 100%; border-right: 1px solid rgba(221, 221, 221, 1);">
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item m-3">
-          <button [routerLink]="['/pages/dashboard']" class="poppins_font nav-link active" aria-current="page" style="background-color: #3d3185;">
-            <img src="assets/login/sidebar/dashboard-icon.svg" alt="">
+          <button class="poppins_font nav-link" [ngClass]="{ 'active': showDashboard }" (click)="showDashboardComponent()">
+            <img src="assets/login/sidebar/dashboard-icon.svg" alt="" >
             <span class="m-4 span_sidebar_bullets">Dashboard</span>
           </button>
         </li>
-  
+
         <li class="nav-item m-3">
-          <a class="poppins_font nav-link link-body-emphasis">
+          <button class="poppins_font nav-link "  [ngClass]="{ 'active': showStaff }" (click)="showStaffComponent()">
             <img src="assets/login/sidebar/Staff.svg" alt="">
             <span class="m-4 unactive_sidebar_bullet">Staff</span>
-          </a>
+          </button>
         </li>
-  
+
+
         <li class="nav-item m-3">
-          <a class="poppins_font nav-link link-body-emphasis" aria-current="page">
+          <button class="poppins_font nav-link" [ngClass]="{ 'active': showEmployee }" (click)="showEmployeeComponent()">
             <img src="assets/login/sidebar/Employee.svg" alt="">
             <span class="m-4 unactive_sidebar_bullet">Employee</span>
-          </a>
+          </button>
         </li>
-  
+
+        <!-- Add more buttons similarly if needed -->
         <li class="nav-item m-3">
-          <a class="poppins_font nav-link link-body-emphasis" aria-current="page">
+          <button class="poppins_font nav-link "  [ngClass]="{ 'active': showPayroll }" (click)="showPayrollComponent()">
             <img src="assets/login/sidebar/Payroll.svg" alt="">
             <span class="m-4 unactive_sidebar_bullet">Payroll</span>
-          </a>
+          </button>
         </li>
-  
+
         <li class="nav-item m-3">
-          <a class="poppins_font nav-link link-body-emphasis" aria-current="page">
+          <button class="poppins_font nav-link "  [ngClass]="{ 'active': showSettings }" (click)="showSettingsComponent()">
             <img src="assets/login/sidebar/settings.svg" alt="">
             <span class="m-4 unactive_sidebar_bullet">Settings</span>
-          </a>
+          </button>
         </li>
-  
+
         <li class="nav-item m-3">
-          <a class="poppins_font nav-link link-body-emphasis" aria-current="page">
+          <button class="poppins_font nav-link "  [ngClass]="{ 'active': showMore }" (click)="showMoreComponent()">
             <img src="assets/login/sidebar/More.svg" alt="">
             <span class="m-4 unactive_sidebar_bullet">More</span>
-          </a>
+          </button>
         </li>
       </ul>
+    </div>
+  </div>
 
-      
-    </div>   
-    
-    
+  <div class="col-lg-9 col-md-9 col-sm-9">
+    <div *ngIf="showDashboard">
+      <app-dashboard></app-dashboard>
+    </div>
+    <div *ngIf="showStaff">
+      <app-staff></app-staff>
+    </div>
+
+
+    <div *ngIf="showEmployee">
+      <app-employee></app-employee>
+    </div>
+    <div *ngIf="showPayroll">
+      <app-payroll></app-payroll>
+    </div>
+
+
+
+    <div *ngIf="showSettings">
+      <app-settings></app-settings>
+    </div>
+    <div *ngIf="showMore">
+      <app-more></app-more>
+    </div>
+
+
+
+  </div>
 </div>

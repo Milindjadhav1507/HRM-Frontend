@@ -1,54 +1,75 @@
-<table mat-table [dataSource]="dataSource" matSort
-       clEass="custom-table">
+<div class=" m2">
 
-  <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
-      No.
+<h1 class="poppins_font mt-4  mb-5 text-uppercase" style="font-size: 35px;font-weight: 600;">manage employee</h1>
+
+  <table mat-table [dataSource]="dataSource" matSort class="custom-table">
+
+
+  <ng-container matColumnDef="EmployeeName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by EmployeeName" >
+       <span>Employee Name</span>
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.EmployeeName}} </td>
+    <td mat-cell *matCellDef="let element"> 
+      <!-- <i class="fa fa-use/r"></i>   -->
+      <!-- <img src="./assets/login/sidebar/Employee/blue-circle-with-white-user.zip" alt="Avatar" class="avatar">  -->
+      <img width="12%" height="12%" src="https://img.icons8.com/color/48/test-account.png" alt="test-account"/>
+      <span class="m-2">{{element.EmployeeName}}</span>
+    </td>
   </ng-container>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
-      Name
+
+  <ng-container matColumnDef="EmployeeID">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by EmployeeID">
+       <span>Employee ID</span>
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.EmployeeID}} </td>
+    <td mat-cell *matCellDef="let element"> 
+      {{element.EmployeeID}} 
+    </td>
   </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight">
-      Weight
+
+  <ng-container matColumnDef="Designation" >
+    <th mat-header-cell *matHeaderCellDef  >
+       <span>Designation</span>
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.Designation}} </td>
+  </ng-container>
+  
+
+  <ng-container matColumnDef="Branch" >
+    <th mat-header-cell *matHeaderCellDef  >
+       <span>Branch</span>
     </th>
     <td mat-cell *matCellDef="let element"> {{element.Branch}} </td>
   </ng-container>
 
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
-      Symbol
+
+  <ng-container matColumnDef="Department" >
+    <th mat-header-cell *matHeaderCellDef  >
+      <span>Department</span>
     </th>
     <td mat-cell *matCellDef="let element"> {{element.Department}} </td>
   </ng-container>
-  <ng-container matColumnDef="symbol">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
-      Symbol
+
+  <ng-container matColumnDef="Dateofjoining" >
+    <th mat-header-cell *matHeaderCellDef  >
+       <span>Date of joining</span>
     </th>
     <td mat-cell *matCellDef="let element"> {{element.Dateofjoining}} </td>
   </ng-container>
-
-  <!-- action Column -->
-  <ng-container matColumnDef="action">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header >
-        action
+ 
+  <ng-container matColumnDef="Action" >
+    <th mat-header-cell *matHeaderCellDef>
+        <span>Action</span>
     </th>
-    <td mat-cell *matCellDef="let element">
-        <i class="fa fa-user"></i>
-        <!-- <i class="fa-solid fa-ellipsis"></i> -->
-        <i class="fas fa-ellipsis-h"></i>
-        <i class="fas fa-trash-alt"></i>
+    <td mat-cell *matCellDef="let element"style="padding-left:3%">
+   
+        <i class='fas fa-ellipsis-h text-center' style="font-size: 12px;color: rgba(168, 176, 185, 1);" data-bs-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu">
+          <li><a class="dropdown-item " ><span style="color: green;">Active</span> </a></li>
+          <li><a class="dropdown-item " ><span style="color: #5c49f1;">Inactive</span></a></li>
+          <li><a class="dropdown-item " ><span style="color: red;">Delete</span> <i class="bi bi-trash-fill m-1" style="color: red;"></i></a></li>
+        </ul>
     </td>
   </ng-container>
 
@@ -58,3 +79,6 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
+
+
+</div>

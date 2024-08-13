@@ -34,10 +34,10 @@ Version Installation Needs -
 
 
 
-        ng g m Dashboard  --routing 
-        ng g m Staff  --routing
-        ng g m Employee  --routing
-        ng g m Payroll  --routing
-        ng g m Settings  --routing
 
 
+        
+ng g c Staff       
+ng g c Payroll
+ng g c Settings
+ng g c More

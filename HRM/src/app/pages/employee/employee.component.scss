@@ -1,11 +1,17 @@
 .custom-table th {
-    background-color: #f1f1f1;
+    background-color: rgba(243, 237, 237, 1);
     padding-top: 10px;
     padding-bottom: 10px;
+    height: 10px;
+    width: 10px;
+    font-family: "Poppins", sans-serif;
+    color: rgba(79, 91, 103, 1);
+    font-weight: 600;
   }
   
   .custom-table td {
     font-size: 14px;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-family: "Poppins", sans-serif;
   }
