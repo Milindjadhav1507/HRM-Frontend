@@ -30,14 +30,8 @@ Version Installation Needs -
         ~ Company
         ~ Company-Admin
         ~ HR
-        ~ Emloyee
+        ~ Employee
 
 
 
 
-
-        
-ng g c Staff       
-ng g c Payroll
-ng g c Settings
-ng g c More
