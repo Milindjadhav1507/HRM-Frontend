@@ -1,52 +1,55 @@
-<div class="p-2" style="border-bottom: 1px solid rgba(221, 225, 230, 1);">
-  <div class="mt-2 sticky-top">
+<div class="p-2 border-bottom border-muted">
+    <div class="mt-2 sticky-top">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a [routerLink]="['/account/login']" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-              <img src="./assets/logo/esarwa logo.png" alt="esarwa_logo" style="height: 42px; width: 167px;">
+        
+        <!-- Logo Section -->
+        <a [routerLink]="['/account/login']" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+          <img src="./assets/logo/esarwa logo.png" alt="esarwa_logo" style="height: 42px; width: 167px;">
+        </a>
+  
+        <!-- Navbar Links -->
+        <ul class="nav ms-auto">
+          <li [class]="isNavbarHidden2 ? '' : 'd-none'"><a class="nav-link px-2"><span class="poppins_font" style="font-weight: 400;font-size: 16px;color: #21272A;">About Us</span></a></li>
+          <li [class]="isNavbarHidden2 ? '' : 'd-none'"><a class="nav-link px-2"><span class="poppins_font" style="font-weight: 400;font-size: 16px;color: #21272A;">Terms & Conditions</span></a></li>
+          <li [class]="isNavbarHidden2 ? '' : 'd-none'"><a class="nav-link px-2"><span class="poppins_font" style="font-weight: 400;font-size: 16px;color: #21272A;">Privacy Policies</span></a></li>
+        </ul>
+  
+        <!-- Search Form -->
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 position-relative" role="search" [class]="isNavbarHidden2 ? 'd-none' : ''">
+          <input type="search" class="form-control pe-5" placeholder="Search..." aria-label="Search">
+          <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3" style="font-size: 1.2rem; color: #6c757d;"></i>
+        </form>
+  
+        <!-- Notification Icon -->
+        <i class="bi bi-bell position-relative m-2" [class]="isNavbarHidden2 ? 'd-none' : ''">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            99+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </i>
+  
+        <!-- Profile Dropdown -->
+        <div class="dropdown text-end" [class]="isNavbarHidden2 ? 'd-none' : ''">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="./assets/logo/profile-sample-photo.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
-
-          <ul class="nav ms-auto">
-              <li [class]="isNavbarHidden2 ? '':'hidden'" ><a class="nav-link px-2 link-body-emphasis"><span class="poppins_font" style="font-weight: 400;font-size: 16px;color: rgba(33, 39, 42, 1);">About Us</span></a></li>
-              <li [class]="isNavbarHidden2 ? '':'hidden'"><a class="nav-link px-2 link-body-emphasis"><span class="poppins_font" style="font-weight: 400;font-size: 16px;color: rgba(33, 39, 42, 1);">Terms & Conditions</span></a></li>
-              <li [class]="isNavbarHidden2 ? '':'hidden'"><a class="nav-link px-2 link-body-emphasis"><span class="poppins_font" style="font-weight: 400;font-size: 16px;color: rgba(33, 39, 42, 1);">Privacy Policies</span></a></li>
-
-              
-
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
           </ul>
-
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 position-relative" role="search" [class]="isNavbarHidden2 ? 'hidden':''">
-              <input type="search" class="form-control pe-5" placeholder="Search..." aria-label="Search">
-              <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3" style="font-size: 1.2rem; color: #6c757d;"></i>
-          </form>
-<<<<<<< HEAD
-          <i class="bi bi-bell  position-relative " [class]="isNavbarHidden2 ? 'hidden':''" style="    margin: 10px 17px !important;">
-=======
-          <i class="bi bi-bell  position-relative m-4" [class]="isNavbarHidden2 ? 'hidden':''">
->>>>>>> cf23615713376f932bf4daae15cbef6054c91984
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              99+
-              <span class="visually-hidden">unread messages</span>
-            </span>
-          </i>
-          <div class="dropdown text-end" [class]="isNavbarHidden2 ? 'hidden':''">
-              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="./assets/logo/profile-sample-photo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-              </a>
-              <ul class="dropdown-menu text-small">
-                  <li><a class="dropdown-item" href="#">New project...</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Sign out</a></li>
-              </ul>
-          </div>
-
-          <select class="form-select poppins_font" style="width: 6%; height: 40px; text-align: center; border: none;font-weight: 400;font-size: 16px;color: rgba(33, 39, 42, 1);">
-            <option value="English" selected class="poppins_font" style="font-weight: 400;font-size: 16px;color: rgba(33, 39, 42, 1);text-align: left;">English</option>
-            <option value="Marathi" class="poppins_font" style="font-weight: 400;font-size: 16px;color: rgba(33, 39, 42, 1);text-align: left;">Marathi</option>
-            <option value="Hindi" class="poppins_font" style="font-weight: 400;font-size: 16px;color: rgba(33, 39, 42, 1);text-align: left;">Hindi</option>
-          </select>
-
+        </div>
+  
+        <!-- Language Select -->
+        <select class="form-select poppins_font ms-2" style="width: 6%; height: 40px; border: none;font-weight: 400;font-size: 16px;color: #21272A;">
+          <option value="English" selected>English</option>
+          <option value="Marathi">Marathi</option>
+          <option value="Hindi">Hindi</option>
+        </select>
+  
       </div>
+    </div>
   </div>
-</div>
+  
